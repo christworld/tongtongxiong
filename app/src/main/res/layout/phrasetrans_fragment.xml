@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+        <Button
+            android:id="@+id/id_trans_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="语音识别键 （中文状态）"
+            android:textSize="18sp"
+            android:layout_gravity="top"
+            android:paddingLeft="10dip"
+            android:paddingRight="30dip"
+            android:background="@drawable/button_border"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/id_trans_tw"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_marginTop="8dip"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:hint="中文语音识别结果"
+            android:background="@drawable/text_view_border"
+            android:textColor="#ff000000" />
+
+        <TextView
+            android:id="@+id/id_trans_english_tw"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_marginTop="8dip"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:hint="英语翻译结果"
+            android:background="@drawable/text_view_border"
+            android:textColor="#ff000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+        <Button
+            android:id="@+id/id_talk_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="语音识别键 （英文状态）"
+            android:textSize="18sp"
+            android:layout_gravity="top"
+            android:paddingLeft="10dip"
+            android:paddingRight="30dip"
+            android:background="@drawable/button_border"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/id_english_talk_tw"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_marginTop="8dip"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:hint="英文语音识别结果"
+            android:background="@drawable/text_view_border"
+            android:textColor="#ff000000" />
+
+        <TextView
+            android:id="@+id/id_english_answer_tw"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_marginTop="8dip"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:hint="中语翻译结果"
+            android:background="@drawable/text_view_border"
+            android:textColor="#ff000000" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:layout_marginBottom="10dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/id_play_record_btn"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="播放录音"
+            android:textSize="18sp"
+            android:layout_gravity="top"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_border"
+            android:clickable="true"/>
+        <Button
+            android:id="@+id/id_play_tts_btn"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="播放识别语音"
+            android:textSize="18sp"
+            android:layout_gravity="top"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_border"
+            android:clickable="true"/>
+    </LinearLayout>
+</LinearLayout>

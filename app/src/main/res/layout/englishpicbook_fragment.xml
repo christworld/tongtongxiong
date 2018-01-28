@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="中文识别："
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/chi_rec_id"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:background="@drawable/text_view_border"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:text="" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="英文识别："
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/eng_rec_id"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:background="@drawable/text_view_border"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:text="" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="评测文本："
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/ise_text_id"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:background="@drawable/text_view_border"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:text="" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.5"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="评测结果："
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/ise_res_text_id"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:background="@drawable/text_view_border"
+            android:inputType="textMultiLine"
+            android:maxLines="1"
+            android:text="" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.5"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/bt_iat_id"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="语音识别"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:visibility="visible" />
+        <Button
+            android:id="@+id/bt_tts_id"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="语音合成"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:visibility="visible" />
+        <Button
+            android:id="@+id/bt_ise_id"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="语音评测"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:visibility="visible" />
+    </LinearLayout>
+</LinearLayout>

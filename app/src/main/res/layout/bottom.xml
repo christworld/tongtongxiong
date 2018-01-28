@@ -148,4 +148,27 @@
             android:text="我的"
             android:textColor="#ffffff" />
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/id_tab_singletask"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/id_tab_singletask_img"
+            android:layout_width="fill_parent"
+            android:layout_height="3dip"
+            android:layout_gravity="top"
+            android:clickable="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dip"
+            android:textSize="15sp"
+            android:text="单一任务"
+            android:textColor="#ffffff" />
+    </LinearLayout>
 </LinearLayout>

@@ -33,6 +33,7 @@ import com.allbear.hopedemo.Fragment.AllbearFragment;
 import com.allbear.hopedemo.Fragment.EnglishPicBookFragment;
 import com.allbear.hopedemo.Fragment.RadioStationFragment;
 import com.allbear.hopedemo.Fragment.SettingsFragment;
+import com.allbear.hopedemo.Fragment.SingleTaskFragment;
 import com.allbear.hopedemo.Log.Log;
 import com.allbear.hopedemo.MySQL.MySQL;
 import com.allbear.hopedemo.Engine.AllbearIat;
@@ -60,8 +61,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener
     private FragmentPagerAdapter mAdapter;
     private List<Fragment> mFragments = new ArrayList<Fragment>();
 
-    private static int mTabCount = 3;
-    private int mInitSelcet = 0;
+    private static int mTabCount = 4;
+    private int mInitSelcet = 3;
     private int mPreSelectItem;
 
     private List<LinearLayout> mTabLinearLayouts = new ArrayList<LinearLayout>();
@@ -71,7 +72,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener
 //            R.id.id_tab_pairwork,
 //            R.id.id_tab_phrasetrans,
 //            R.id.id_tab_intelligentspeaker,
-            R.id.id_tab_settings
+            R.id.id_tab_settings,
+            R.id.id_tab_singletask
     };
     private List<ImageButton> mImageButtons = new ArrayList<ImageButton>();
     private int [] mImageButtonIds = {
@@ -80,14 +82,15 @@ public class MainActivity extends FragmentActivity implements OnClickListener
 //            R.id.id_tab_pairwork_img,
 //            R.id.id_tab_phrasetrans_img,
 //            R.id.id_tab_intelligentspeaker_img,
-            R.id.id_tab_settings_img
+            R.id.id_tab_settings_img,
+            R.id.id_tab_singletask_img
     };
     private int [] mImageNormalIds = {
             R.drawable.tab_color_normal,
             R.drawable.tab_color_normal,
 //            R.drawable.tab_color_normal,
 //            R.drawable.tab_color_normal,
-//            R.drawable.tab_color_normal,
+            R.drawable.tab_color_normal,
             R.drawable.tab_color_normal
 //            R.drawable.img_introdeuce_normal,
 //            R.drawable.img_englishpicbook_normal,
@@ -101,7 +104,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener
             R.drawable.tab_color_pressed,
 //            R.drawable.tab_color_pressed,
 //            R.drawable.tab_color_pressed,
-//            R.drawable.tab_color_pressed,
+            R.drawable.tab_color_pressed,
             R.drawable.tab_color_pressed
 //            R.drawable.img_introdeuce_press,
 //            R.drawable.img_englishpicbook_press,
@@ -117,6 +120,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener
 //    private Fragment mPhraseTransFragment;
 //    private Fragment mIntelligentSpeakerFragment;
     private Fragment mSettingsFragment;
+    private Fragment mSingleTaskFragment;
 
     private AllbearMediaplayer mMediaPlayer;
     private AllbearTts mAllbearTts;
@@ -203,9 +207,11 @@ public class MainActivity extends FragmentActivity implements OnClickListener
         mRadioStationFragment = new RadioStationFragment();
         mEnglishPicBookFragment = new EnglishPicBookFragment();
         mSettingsFragment = new SettingsFragment();
+        mSingleTaskFragment = new SingleTaskFragment();
         mFragments.add(mRadioStationFragment);
         mFragments.add(mEnglishPicBookFragment);
         mFragments.add(mSettingsFragment);
+        mFragments.add(mSingleTaskFragment);
 
         for(int i = 0;i < mTabCount; i++){
             mTabLinearLayouts.add((LinearLayout) findViewById(mTabLinearLayoutIds[i]));

@@ -22,6 +22,6 @@ public class Turn extends SingleTaskBase {
     @Override
     public void doProgramTime() {
         Log.info(LogTag, "doProgramTime");
-
+        mMediaPlayer.startPlay("Sound/wrong.wav");
     }
 }

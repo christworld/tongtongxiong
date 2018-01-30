@@ -5,11 +5,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.allbear.hopedemo.Log.Log;
 import com.allbear.hopedemo.R;
-import com.allbear.hopedemo.Structure.time_sets;
+import com.allbear.hopedemo.SingleTask.Books;
+import com.allbear.hopedemo.SingleTask.EatEnglish;
+import com.allbear.hopedemo.SingleTask.EnglishFAQ;
+import com.allbear.hopedemo.SingleTask.FollowRead;
+import com.allbear.hopedemo.SingleTask.MorningEnglish;
+import com.allbear.hopedemo.SingleTask.SceneEnglish;
+import com.allbear.hopedemo.SingleTask.Talk;
+import com.allbear.hopedemo.SingleTask.WeekTest;
+import com.allbear.hopedemo.SingleTask.Words;
+import com.allbear.hopedemo.program.BookTime;
+import com.allbear.hopedemo.program.OralTime;
+import com.allbear.hopedemo.program.ProgramBase;
+import com.allbear.hopedemo.program.SchoolTime;
+import com.allbear.hopedemo.SingleTask.Turn;
+import com.allbear.hopedemo.program.VideoTime;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,14 +36,28 @@ public class SingleTaskFragment extends AllbearFragment implements View.OnClickL
 
     private List<Button> mButtons = new ArrayList<Button>();
     private int [] mButtonIds = {
-            R.id.tv_user_id,
-            R.id.tv_getup_time,
-            R.id.tv_holi_getup_time,
-            R.id.tv_school_time,
-            R.id.tv_book_time,
-            R.id.tv_video_time,
-            R.id.tv_oral_time,
-            R.id.tv_sleep_time
+            R.id.bt_turn_id,
+            R.id.bt_english_faq_id,
+            R.id.bt_talk_id,
+            R.id.bt_weektest_id,
+            R.id.bt_words_id,
+            R.id.bt_book_id,
+            R.id.bt_followread_id,
+            R.id.bt_scene_english_id,
+            R.id.bt_eat_english_id,
+            R.id.bt_morning_english_id
+    };
+    private ProgramBase[] mProgramBases = {
+            Turn.getInstance(),
+            EnglishFAQ.getInstance(),
+            Talk.getInstance(),
+            WeekTest.getInstance(),
+            Words.getInstance(),
+            Books.getInstance(),
+            FollowRead.getInstance(),
+            SceneEnglish.getInstance(),
+            EatEnglish.getInstance(),
+            MorningEnglish.getInstance()
     };
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -50,7 +77,9 @@ public class SingleTaskFragment extends AllbearFragment implements View.OnClickL
 
     private void initView(){
         for(int i = 0;i < mButtonIds.length; i++){
-            mButtons.add((Button) mView.findViewById(mButtonIds[i]));
+            Button button = (Button) mView.findViewById(mButtonIds[i]);
+            button.setOnClickListener(this);
+            mButtons.add(button);
         }
     }
 
@@ -58,7 +87,6 @@ public class SingleTaskFragment extends AllbearFragment implements View.OnClickL
     public void onEntryView() {
         super.onEntryView();
         Log.info(LogTag,"onEntryView");
-
     }
     @Override
     public void onExitView() {
@@ -68,10 +96,11 @@ public class SingleTaskFragment extends AllbearFragment implements View.OnClickL
     }
     @Override
     public void onClick(View v) {
-        for(int i = 1;i < mButtonIds.length; i++){
+        Log.info(LogTag,"onClick mButtonIds.length=" + mButtonIds.length);
+        for(int i = 0;i < mButtonIds.length; i++){
             if(v.getId() == mButtonIds[i]) {
-//                InControl.getInstance().doInControl(i-1);
                 Log.info(LogTag,"onClick i= " + i);
+                mProgramBases[i].doProgramTime();
             }
         }
     }

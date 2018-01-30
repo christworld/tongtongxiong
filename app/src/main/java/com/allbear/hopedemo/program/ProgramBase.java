@@ -68,7 +68,7 @@ public class ProgramBase {
         Log.info("HopeProgramBase","ProgramBase  ");
     }
 
-    protected void doProgramTime(){}
+    public void doProgramTime(){}
 
     protected String doGetCity() {
         String cityName = "";

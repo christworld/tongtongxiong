@@ -14,27 +14,27 @@
         android:gravity="center_vertical"
         android:orientation="horizontal" >
         <Button
-            android:id="@+id/bt_iat_id"
+            android:id="@+id/bt_turn_id"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="语音识别"
+            android:text="机器巡游"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:visibility="visible" />
         <Button
-            android:id="@+id/bt_tts_id"
+            android:id="@+id/bt_english_faq_id"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="语音合成"
+            android:text="英语问答"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:visibility="visible" />
         <Button
-            android:id="@+id/bt_ise_id"
+            android:id="@+id/bt_talk_id"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="语音评测"
+            android:text="机器对话"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:visibility="visible" />
     </LinearLayout>
@@ -48,29 +48,81 @@
         android:gravity="center_vertical"
         android:orientation="horizontal" >
         <Button
-            android:id="@+id/bt_ia_id"
+            android:id="@+id/bt_weektest_id"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="语音识别"
+            android:text="每周测验"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:visibility="visible" />
         <Button
-            android:id="@+id/bt_tt_id"
+            android:id="@+id/bt_words_id"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="语音合成"
+            android:text="单词接龙"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:visibility="visible" />
         <Button
-            android:id="@+id/bt_is_id"
+            android:id="@+id/bt_book_id"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="语音评测"
+            android:text="绘本练习"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:visibility="visible" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/bt_followread_id"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="跟读练习"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:visibility="visible" />
+        <Button
+            android:id="@+id/bt_scene_english_id"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="情景英语"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:visibility="visible" />
+        <Button
+            android:id="@+id/bt_eat_english_id"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="吃饭英语"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:visibility="visible" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/bt_morning_english_id"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="早晨英语"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:visibility="visible" />
 
+    </LinearLayout>
 </LinearLayout>

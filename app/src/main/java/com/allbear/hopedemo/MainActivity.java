@@ -43,6 +43,7 @@ import com.allbear.hopedemo.Engine.AllbearTts;
 import com.allbear.hopedemo.Engine.AllbearTulingTalk;
 import com.allbear.hopedemo.Engine.AllbearWeather;
 import com.allbear.hopedemo.Services.TtxServices;
+import com.allbear.hopedemo.Structure.EnglishTests;
 import com.allbear.hopedemo.Structure.ask_children;
 import com.allbear.hopedemo.Structure.ask_robot;
 import com.allbear.hopedemo.Structure.books;
@@ -374,5 +375,6 @@ public class MainActivity extends FragmentActivity implements OnClickListener
         ask_children.getInstance().InitData();
         todayInfo.getInstance().InitData();
         ask_robot.getInstance().InitData();
+        EnglishTests.getInstance().InitData();
     }
 }

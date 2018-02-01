@@ -17,13 +17,8 @@ import com.allbear.hopedemo.SingleTask.SceneEnglish;
 import com.allbear.hopedemo.SingleTask.Talk;
 import com.allbear.hopedemo.SingleTask.WeekTest;
 import com.allbear.hopedemo.SingleTask.Words;
-import com.allbear.hopedemo.program.BookTime;
-import com.allbear.hopedemo.program.OralTime;
 import com.allbear.hopedemo.program.ProgramBase;
-import com.allbear.hopedemo.program.SchoolTime;
 import com.allbear.hopedemo.SingleTask.Turn;
-import com.allbear.hopedemo.program.VideoTime;
-
 import java.util.ArrayList;
 import java.util.List;
 

@@ -50,7 +50,9 @@ public class Const {
             "city",
             "province",
             "holiday",
-            "programming"
+            "programming",
+            "tests",
+            "test_records"
     };
 
     public static final String [] mCreateTables = {
@@ -75,7 +77,9 @@ public class Const {
             Const.createTableSql_city,
             Const.createTableSql_province,
             Const.createTableSql_holiday,
-            Const.createTableSql_programming
+            Const.createTableSql_programming,
+            Const.createTableSql_tests,
+            Const.createTableSql_test_records
         };
 
     public static final String createTableSql_books = "CREATE TABLE `books` (\n" +
@@ -300,7 +304,27 @@ public class Const {
             "  PRIMARY KEY (`id`)\n" +
             ")";
 
+    public static final String createTableSql_tests = "CREATE TABLE `tests` (\n" +
+            "  `test_id` int(11) NOT NULL,\n" +
+            "  `test_cate` int(11) NOT NULL, \n" +
+            "  `cate_data` int(11) NOT NULL,\n" +
+            "  `cate_id` int(11) NOT NULL,\n" +
+            "  `english1` varchar(200) NOT NULL,\n" +
+            "  `chinese1` varchar(200) DEFAULT NULL,\n" +
+            "  `keywords` varchar(200) DEFAULT NULL,\n" +
+            "  PRIMARY KEY (`test_id`)\n" +
+            ")";
 
+    public static final String createTableSql_test_records= "CREATE TABLE `test_records` (\n" +
+            "  `test_records_id` int(11) NOT NULL,\n" +
+            "  `user_id` int(11) NOT NULL,\n" +
+            "  `datetime` datetime NOT NULL ,\n" +
+            "  `test_data` varchar(45) DEFAULT NULL ,\n" +
+            "  `reply` varchar(45) DEFAULT NULL ,\n" +
+            "  `bh` int(11) DEFAULT NULL ,\n" +
+            "  `scores` int(11) DEFAULT NULL ,\n" +
+            "  PRIMARY KEY (`test_records_id`)\n" +
+            ")";
 
     public static final String [] mGetUpWeekCall ={
             "Good morning, good morning Sunday morning.	新的一天开始了	A new day begins. Let's get up in music! ",
